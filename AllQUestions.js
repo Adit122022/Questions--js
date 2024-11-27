@@ -106,27 +106,82 @@ else{
 
 
 ************************************************************************************************
+9  Accept the lengths of the three sides of a triangle. Calculate the area 
+using Heron's formula and print it.
 
-9
+function calculate(a,b,c){
+    if (a + b > c && a + c > b && b + c > a) {
+        let s = (a+b+c)/2
+        let area =Math.sqrt(s* ( s - a ) * ( s - b ) * ( s - c ));
+        return area;
+    }
+    else{
+        return "The given sides do not form a valid triangle.";
+    }
+
+}
+let a = parseFloat(prompt("Enter the first side of the triangle:"));
+let b = parseFloat(prompt("Enter the second side of the triangle:"));
+let c = parseFloat(prompt("Enter the third side of the triangle:"));
+let result = calculate(a,b,c);
+console.log(result !== "Invalid triangle sides" ? `The area of the triangle is: ${result}` : result);
 
 
 ************************************************************************************************
 
-10
+10   Accept a year from the user and determine if it is a leap year or not based 
+on the leap year conditions.
+ If the year is evenly divisible by 4, it is a leap year.
+ If the year is evenly divisible by 100, it is not a leap year, unless:
+ The year is also evenly divisible by 400, then it is a leap year
+
+ let a = parseInt(prompt("Enter the year"))
+if((a % 4 ===0 && a % 100 !==0) || a % 400===0 ){
+    console.log( `${a} is leap year`)
+}
+else{
+    console.log(``${a}  is not a leap year`)
+}
 
 
 ************************************************************************************************
 
-11
+11  Accept an integer and  Print hello world n times
+let a = parseInt(prompt("Enter  the number"))
+for (let i =1 ; i<=a ; i++){
+console.log("Hello world")
+}
 
 
 ************************************************************************************************
 
-12
+12 Write a program to print all natural numbers up to a given limit 'n'.
+let a = parseInt(prompt("Enter  the number"))
+for (let i =1 ; i<=a ; i++){
+console.log(i)
+}
 
 
 ************************************************************************************************
-13
+13 Write a program to calculate the sum of the first 'n' natural numbers
 
+let a = parseInt(prompt("Enter  the number"))
+let sum =0;
+for (let i =1 ; i<=a ; i++){
+sum+=i;
+}
+console.log(sum)
 
+************************************************************************************************
+
+14.  Write a program to calculate the factorial of a given number.
+let a = parseInt(prompt("Enter  the number"))
+let fact =1;
+for (let i =1 ; i<=a ; i++){
+fact*=i;
+}
+console.log(fact)
+
+*************************************************************************************************
 */
+
