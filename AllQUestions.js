@@ -188,6 +188,19 @@ considering the following conditions:
  A prime number is a positive integer greater than 1, which has only two 
 positive divisors: 1 and number itself.
 
+let a = parseInt(prompt("Enter  the number"))
+let count = 0;
+// factore 
+if(a==1) console.log("number is not prime")
+for(let i = 2; i < a/2 ; i++){
+    if(a % i == 0){
+        // console.log(`${i} is a factor of ${a}`)
+        count++;
+    }
+}
+if(count == 0) console.log(`${a} is a prime number`)
+    else console.log(`${a} is not a prime number`)
+
 
 **************************************************************************************************
 
@@ -289,20 +302,9 @@ console.log(`${a} is not a palindrome`)
 }
 
 */
-// 15.
 
-let a = parseInt(prompt("Enter  the number"))
-let count =0;
-// factore 
-if(n==1) console.log("number is not prime")
-for(let i = 2; i < a/2 ; i++){
-    if(a % i == 0){
-        // console.log(`${i} is a factor of ${a}`)
-        count++;
-    }
-}
-if(count == 0) console.log(`${a} is a prime number`)
-    else console.log(`${a} is not a prime number`)
+
+
 
 
  
