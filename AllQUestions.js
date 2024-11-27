@@ -193,9 +193,7 @@ positive divisors: 1 and number itself.
 
 16.  Write a program to calculate the sum of the digits of a given number.
 let a = parseInt(prompt("Enter  the number"))
-
 let sum =0;
-
 for(let i =0;i<=a;i++){
     let digit = a % 10;
    sum+=digit;
@@ -261,9 +259,19 @@ if(unit>400)
 
 **************************************************************************************************
 
-19
+19 Write a program to accept a number and print its reverse. Input will not 
+contain trailing zero.
+let a = parseInt(prompt("Enter  the number"))
+let reverse =0;
+while( a > 0 ){
+    let digit = a % 10;
+   reverse = reverse * 10 + digit;
+a = Math.floor(a / 10);
+}
+console.log(reverse);
+
+**************************************************************************************************
+
 
 */
-
-
 
