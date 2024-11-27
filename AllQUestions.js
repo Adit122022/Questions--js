@@ -192,7 +192,16 @@ positive divisors: 1 and number itself.
 **************************************************************************************************
 
 16.  Write a program to calculate the sum of the digits of a given number.
+let a = parseInt(prompt("Enter  the number"))
 
+let sum =0;
+
+for(let i =0;i<=a;i++){
+    let digit = a % 10;
+   sum+=digit;
+a = Math.floor(a / 10);
+}
+console.log(sum)
 
 **************************************************************************************************
 17. You are tasked with creating a shop discount program that calculates
@@ -218,9 +227,43 @@ else{
 
    let finalPrice = totalPrice - ((totalPrice *discount) /100)
    console.log(`The final price after discount is ${finalPrice}`)
+
+**************************************************************************************************
+18 .A utility company needs a program to calculate electricity bills. 
+Accept the number of units consumed from the user and calculate the      
+bill amount based on the following criteria:
+ For the first 100 units, the rate is rupees 4.2 per unit.
+ For the next 100 units, the rate is rupees 6 per unit.
+ For the next 200 units, the rate is rupees 8 per unit.
+ For units above 400, the rate is rupees 13 per unit 
+
+let unit = parseInt(prompt("Enter the total unit"))
+let amount =0;
+if(unit>400)
+  {
+    amount = (unit - 400)*13
+    unit = 400;
+  }
+  if(unit >200 && unit <=400){
+    amount += (unit - 200)*8
+    unit = 200;
+  }
+  if(unit>100 && unit <=200){
+    amount += (unit - 100)*6
+    unit = 100;
+  }
+  if(unit <=100){
+    amount += unit*4.2
+  }
+  
+   console.log(`The final price  is ${amount}`)
+
+
+**************************************************************************************************
+
+19
+
 */
-
-
 
 
 
