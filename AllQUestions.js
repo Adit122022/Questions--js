@@ -194,7 +194,7 @@ positive divisors: 1 and number itself.
 16.  Write a program to calculate the sum of the digits of a given number.
 let a = parseInt(prompt("Enter  the number"))
 let sum =0;
-for(let i =0;i<=a;i++){
+while(a>0){
     let digit = a % 10;
    sum+=digit;
 a = Math.floor(a / 10);
@@ -271,7 +271,39 @@ a = Math.floor(a / 10);
 console.log(reverse);
 
 **************************************************************************************************
-
+ 20 .Write a program to accept a number and determine if it is a palindromic 
+number. A palindromic number is a number that remains the same when 
+its digits are reversed.
+let a = parseInt(prompt("Enter  the number"))
+let reverse =0;
+while( a > 0 ){
+    let digit = a % 10;
+   reverse = reverse * 10 + digit;
+a = Math.floor(a / 10);
+}
+if(a === reverse){
+console.log(`${a} is palindrome `)
+}
+else{
+console.log(`${a} is not a palindrome`)
+}
 
 */
+// 15.
+
+let a = parseInt(prompt("Enter  the number"))
+let count =0;
+// factore 
+if(n==1) console.log("number is not prime")
+for(let i = 2; i < a/2 ; i++){
+    if(a % i == 0){
+        // console.log(`${i} is a factor of ${a}`)
+        count++;
+    }
+}
+if(count == 0) console.log(`${a} is a prime number`)
+    else console.log(`${a} is not a prime number`)
+
+
+ 
 
