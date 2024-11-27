@@ -183,5 +183,44 @@ fact*=i;
 console.log(fact)
 
 *************************************************************************************************
+15.  Write a program to check if a given number is a prime number or not, 
+considering the following conditions:
+ A prime number is a positive integer greater than 1, which has only two 
+positive divisors: 1 and number itself.
+
+
+**************************************************************************************************
+
+16.  Write a program to calculate the sum of the digits of a given number.
+
+
+**************************************************************************************************
+17. You are tasked with creating a shop discount program that calculates
+ discounts based on the total price of items purchased by a customer. 
+0 >= totalPrice <= 5000               -   0% discount
+ 5000 > totalPrice <= 7000      -   5% discount
+ 7000 > totalPrice <= 9000      -   10% discount
+ 9000>totalPrice                               -   20% discount
+
+ let totalPrice = parseInt(prompt("Enter the total price of the product"))
+let discount =0;
+if(totalPrice >= 0 && totalPrice <= 5000) {
+ discount =0
+}else if(totalPrice <5000 && totalPrice<=7000){
+   discount=5
+}
+else if(totalPrice <7000 && totalPrice<=9000){
+    discount=10
+}
+else{
+    discount =20
+}
+
+   let finalPrice = totalPrice - ((totalPrice *discount) /100)
+   console.log(`The final price after discount is ${finalPrice}`)
 */
+
+
+
+
 
